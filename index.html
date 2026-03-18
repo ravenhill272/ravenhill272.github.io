@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thomas Frederick Loos II</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400&family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:     #0a0a0b;
+      --border: #1e1e22;
+      --muted:  #55555f;
+      --text:   #b8b8c4;
+      --bright: #e4e4ee;
+      --accent: #8080bb;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'EB Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.75;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    main {
+      max-width: 520px;
+      width: 100%;
+      animation: up 0.7s ease both;
+    }
+
+    .mono {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: clamp(1.8rem, 5vw, 2.6rem);
+      color: var(--bright);
+      line-height: 1.15;
+      margin: 0.6rem 0 0.3rem;
+    }
+
+    .location {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 1rem;
+      max-width: 54ch;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    nav a {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      text-decoration: none;
+      color: var(--text);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--bright); }
+    nav a:hover .arrow { color: var(--accent); }
+
+    .link-label { font-size: 1rem; }
+
+    .arrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    @keyframes up {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mono">Independent Researcher</div>
+    <h1>Thomas Frederick Loos II</h1>
+    <div class="location">New Mexico</div>
+
+    <p>
+      Empirical conflict analysis, archaeoastronomy, esoteric textual research,
+      and anomalous phenomena investigation.
+    </p>
+    <p>
+      Author of <em>Eleven Across Time</em>.
+    </p>
+
+    <hr />
+
+    <nav>
+      <a href="papers.html">
+        <span class="link-label">Research Papers</span>
+        <span class="arrow">→</span>
+      </a>
+      <a href="https://medium.com" target="_blank" rel="noopener">
+        <span class="link-label">Medium</span>
+        <span class="arrow">↗</span>
+      </a>
+      <!-- Add more links here -->
+    </nav>
+
+    <footer>&copy; 2026 Thomas Frederick Loos II</footer>
+  </main>
+</body>
+</html>
